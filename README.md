@@ -1,14 +1,26 @@
-Slugr
+## Slugr
 
- Easy to use "slugification" class.
+Easy to use "slugification" class.
 
-Usage:
-
- Slugr::slugify([TEXT-TO-SLUGIFY]);
-
-Example:
-
+### Usage:
+```php
 <?php
 require 'src/Slugr.php';
 use Slugr\Slugr;
-print Slugr::slugify('Hello World Out There');
+print Slugr::slugify([TEXT-TO-SLUGIFY], [SEPERATOR], [LOWERCASE], [LIMIT], [EXPRESSION]);
+```
+
+### Examples:
+```php print Slugr::slugify('Hello World Out There');```
+`>>` `Hello-World-Out-There`
+
+`print Slugr::slugify('Hello World Out There', '.', false);`
+`>> Hello.World.Out.There`
+
+`print Slugr::slugify('Hello World Out There', '_', true);` will output `hello_world_out_there`
+
+`print Slugr::slugify('Hello World Out There', '--**--', true);` will output `hello--**--world--**--out--**--there`
+
+`print Slugr::slugify('Hello World Out There', null, null, 15);` will output` Hello-World-Out`
+
+`print Slugr::slugify('Hällö Welt da draußen! 2,3,4 - - ');` will output `H-ll-Welt-da-drau-en-2-3-4`
