@@ -5,6 +5,7 @@ Easy to use "slugification" class.
 ### Usage:
 ```php
 <?php
+
 require 'src/Slugr.php';
 use Slugr\Slugr;
 print Slugr::slugify([TEXT-TO-SLUGIFY], [SEPERATOR], [LOWERCASE], [LIMIT], [EXPRESSION]);
@@ -13,6 +14,7 @@ print Slugr::slugify([TEXT-TO-SLUGIFY], [SEPERATOR], [LOWERCASE], [LIMIT], [EXPR
 ### Examples:
 ```php
 print Slugr::slugify('Hello World Out There');
+
 ```
 will output `Hello-World-Out-There`
 
